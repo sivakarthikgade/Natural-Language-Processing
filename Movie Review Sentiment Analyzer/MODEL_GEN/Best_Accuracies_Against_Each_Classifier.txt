@@ -1,0 +1,19 @@
+'Train: DT - Unigram - TFIDF - EXCL SW'
+70.82
+
+
+'Train: NB - Unigram - TFIDF - EXCL SW'
+82.2
+
+
+'Train: RF - Bigram - PNP - EXCL SW'
+75.14
+
+
+'Train: SMO1 - Unigram - TF - EXCL SW'
+86.36
+
+
+'Train: SMO2 - Unigram - TFIDF - EXCL SW'
+84.42
+

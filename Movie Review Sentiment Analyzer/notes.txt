@@ -1,0 +1,60 @@
+Text Classification Task:
+Choose dataset.
+Select preprocesing methods.
+Select classifiers with different configurations.
+Compare performance.
+Build ensemble classifier.
+
+
+
+43, 40, 35, 34, 33, 31, 28, 27, 26, 24, 20, 16, 14, 11, 1
+
+
+MOVIE SENTIMENT ANALYSIS
+Dataset:
+	http://ai.stanford.edu/~amaas/data/sentiment/	
+	One more dataset ?  ( http://thinknook.com/twitter-sentiment-analysis-training-corpus-dataset-2012-09-22/ )
+Preprocess/Feature Engineering:
+	Remove stopwords
+	Features:
+		Bag of words (unigrams)
+		Bag of bigrams
+		Take only most popular* unigrams/bigrams, using some feature selection heurisitics
+		Comeup with some semantic approach to engineer features
+		How to handle unseen words/bigrams ? What smoothing to use ? Are they available OOB in WEKA or some python NLP library ?
+	Feature Values:
+		TF-IDF
+		TF
+		Feature (not )present
+Learn Model:
+	Naive Bayes
+	Support Vector Machines
+	Maximum Entropy Classifier
+	Random Forests
+Test Model:
+	25000 Test Examples
+Comparision Metrics:
+	Accuracy
+	Precision
+	Recall
+	F-measure
+Ensemble Classifier:
+	Use all models built & voting mechanism to classify.
+
+
+Classifier(4) * features(2) * feature_vals(3) * exclude stopwords(2)
+NB			unigram		TF-IDF			YES
+SVM			bigram		TF				NO
+RF					   Present(not)
+KM
+
+
+http://help.sentiment140.com/for-students/				-	NO
+http://www.sananalytics.com/lab/twitter-sentiment/			-	NO
+http://ai.stanford.edu/~amaas/data/sentiment/				-	NO
+http://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html		-	NO
+http://www.cs.cornell.edu/people/pabo/movie-review-data/	-	NO
+
+http://ai.stanford.edu/~amaas/data/sentiment/				-	YES
+http://thinknook.com/twitter-sentiment-analysis-training-corpus-dataset-2012-09-22/	-	YES
+

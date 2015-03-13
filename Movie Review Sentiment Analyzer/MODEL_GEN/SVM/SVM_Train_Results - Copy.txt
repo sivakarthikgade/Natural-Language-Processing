@@ -1,0 +1,664 @@
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\Users\sivakarthik79>e:
+
+E:\>cd E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>SVM_Model_Scripts_3.bat
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Unigram - PNP - EXCL SW'
+
+'Train: SMO1 - Unigram - PNP - EXCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_131.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-N 0 -L -S -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher Studies\
+\\\\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\\\" -t
+okenizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;
+:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 1 -min 1\\\"\" -F \"weka.filters.supervised.attri
+bute.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.attrib
+uteSelection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -P 1.0E
+-12 -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances       10687               85.496  %
+Incorrectly Classified Instances      1813               14.504  %
+Kappa statistic                          0.7099
+Mean absolute error                      0.145
+Root mean squared error                  0.3808
+Relative absolute error                 29.008  %
+Root relative squared error             76.1682 %
+Total Number of Instances            12500
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 5333  917 |    a = neg
+  896 5354 |    b = pos
+
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Unigram - PNP - INCL SW'
+
+'Train: SMO1 - Unigram - PNP - INCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_132.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-N 0 -L -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher Studies\\\\
+\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\\\" -toke
+nizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;:\\
+\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 1 -min 1\\\"\" -F \"weka.filters.supervised.attribut
+e.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.attribute
+Selection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -P 1.0E-12
+ -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances       10687               85.496  %
+Incorrectly Classified Instances      1813               14.504  %
+Kappa statistic                          0.7099
+Mean absolute error                      0.145
+Root mean squared error                  0.3808
+Relative absolute error                 29.008  %
+Root relative squared error             76.1682 %
+Total Number of Instances            12500
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 5333  917 |    a = neg
+  896 5354 |    b = pos
+
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Bigram - PNP - EXCL SW'
+
+'Train: SMO1 - Bigram - PNP - EXCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_231.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-N 0 -L -S -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher Studies\
+\\\\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\\\" -t
+okenizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;
+:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 2 -min 2\\\"\" -F \"weka.filters.supervised.attri
+bute.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.attrib
+uteSelection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -P 1.0E
+-12 -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+Terminate batch job (Y/N)? y
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>
+
+
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\Users\sivakarthik79>cd E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN
+
+C:\Users\sivakarthik79>e:
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>SVM_Model_Scripts_2.bat
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Unigram - TF - EXCL SW'
+
+'Train: SMO1 - Unigram - TF - EXCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_121.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-T -N 0 -L -S -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher Studi
+es\\\\\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\\\"
+ -tokenizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t
+.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 1 -min 1\\\"\" -F \"weka.filters.supervised.at
+tribute.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.att
+ributeSelection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -P 1
+.0E-12 -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances       10795               86.36   %
+Incorrectly Classified Instances      1705               13.64   %
+Kappa statistic                          0.7272
+Mean absolute error                      0.1364
+Root mean squared error                  0.3693
+Relative absolute error                 27.28   %
+Root relative squared error             73.8647 %
+Total Number of Instances            12500
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 5364  886 |    a = neg
+  819 5431 |    b = pos
+
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Unigram - TF - INCL SW'
+
+'Train: SMO1 - Unigram - TF - INCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_121.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-T -N 0 -L -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher Studies\
+\\\\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\\\" -t
+okenizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;
+:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 1 -min 1\\\"\" -F \"weka.filters.supervised.attri
+bute.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.attrib
+uteSelection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -P 1.0E
+-12 -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances       10795               86.36   %
+Incorrectly Classified Instances      1705               13.64   %
+Kappa statistic                          0.7272
+Mean absolute error                      0.1364
+Root mean squared error                  0.3693
+Relative absolute error                 27.28   %
+Root relative squared error             73.8647 %
+Total Number of Instances            12500
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 5364  886 |    a = neg
+  819 5431 |    b = pos
+
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Bigram - TF - EXCL SW'
+'Train: SMO1 - Bigram - TF - EXCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_221.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-T -N 0 -L -S -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher Studi
+es\\\\\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\\\"
+ -tokenizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t
+.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 2 -min 2\\\"\" -F \"weka.filters.supervised.at
+tribute.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.att
+ributeSelection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -P 1
+.0E-12 -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+Terminate batch job (Y/N)? y
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>
+
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>SVM_Model_Scripts_1.bat
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Unigram - TFIDF - EXCL S
+W'
+'Train: SMO1 - Unigram - TFIDF - EXCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_111.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-T -I -N 0 -L -S -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher St
+udies\\\\\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\
+\\" -tokenizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\
+\\t.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 1 -min 1\\\"\" -F \"weka.filters.supervised
+.attribute.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.
+attributeSelection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -
+P 1.0E-12 -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances       10260               82.08   %
+Incorrectly Classified Instances      2240               17.92   %
+Kappa statistic                          0.6416
+Mean absolute error                      0.1792
+Root mean squared error                  0.4233
+Relative absolute error                 35.84   %
+Root relative squared error             84.664  %
+Total Number of Instances            12500
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 5130 1120 |    a = neg
+ 1120 5130 |    b = pos
+
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Unigram - TFIDF - INCL S
+W'
+'Train: SMO1 - Unigram - TFIDF - INCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_112.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-T -I -N 0 -L -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher Studi
+es\\\\\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\\\"
+ -tokenizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t
+.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 1 -min 1\\\"\" -F \"weka.filters.supervised.at
+tribute.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.att
+ributeSelection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -P 1
+.0E-12 -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances       10260               82.08   %
+Incorrectly Classified Instances      2240               17.92   %
+Kappa statistic                          0.6416
+Mean absolute error                      0.1792
+Root mean squared error                  0.4233
+Relative absolute error                 35.84   %
+Root relative squared error             84.664  %
+Total Number of Instances            12500
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 5130 1120 |    a = neg
+ 1120 5130 |    b = pos
+
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Bigram - TFIDF - EXCL SW
+'
+'Train: SMO1 - Bigram - TFIDF - EXCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_211.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-T -I -N 0 -L -S -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher St
+udies\\\\\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\
+\\" -tokenizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\
+\\t.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 2 -min 2\\\"\" -F \"weka.filters.supervised
+.attribute.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.
+attributeSelection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -
+P 1.0E-12 -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+Terminate batch job (Y/N)? y
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>
+
+
+
+
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Bigram - TFIDF - EXCL SW
+'
+'Train: SMO1 - Bigram - TFIDF - EXCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_211.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-T -I -N 0 -L -S -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher St
+udies\\\\\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\
+\\" -tokenizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\
+\\t.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 2 -min 2\\\"\" -F \"weka.filters.supervised
+.attribute.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.
+attributeSelection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -
+P 1.0E-12 -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        4002               80.04   %
+Incorrectly Classified Instances       998               19.96   %
+Kappa statistic                          0.6008
+Mean absolute error                      0.1996
+Root mean squared error                  0.4468
+Relative absolute error                 39.92   %
+Root relative squared error             89.3532 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1986  514 |    a = neg
+  484 2016 |    b = pos
+
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Bigram - TFIDF - INCL SW
+'
+'Train: SMO1 - Bigram - TFIDF - INCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_212.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-T -I -N 0 -L -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher Studi
+es\\\\\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\\\"
+ -tokenizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t
+.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 2 -min 2\\\"\" -F \"weka.filters.supervised.at
+tribute.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.att
+ributeSelection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -P 1
+.0E-12 -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        4002               80.04   %
+Incorrectly Classified Instances       998               19.96   %
+Kappa statistic                          0.6008
+Mean absolute error                      0.1996
+Root mean squared error                  0.4468
+Relative absolute error                 39.92   %
+Root relative squared error             89.3532 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1986  514 |    a = neg
+  484 2016 |    b = pos
+
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Bigram - TF - EXCL SW'
+'Train: SMO1 - Bigram - TF - EXCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_221.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-T -N 0 -L -S -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher Studi
+es\\\\\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\\\"
+ -tokenizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t
+.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 2 -min 2\\\"\" -F \"weka.filters.supervised.at
+tribute.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.att
+ributeSelection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -P 1
+.0E-12 -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        4107               82.14   %
+Incorrectly Classified Instances       893               17.86   %
+Kappa statistic                          0.6428
+Mean absolute error                      0.1786
+Root mean squared error                  0.4226
+Relative absolute error                 35.72   %
+Root relative squared error             84.5222 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2035  465 |    a = neg
+  428 2072 |    b = pos
+
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Bigram - TF - INCL SW'
+'Train: SMO1 - Bigram - TF - INCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_222.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-T -N 0 -L -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher Studies\
+\\\\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\\\" -t
+okenizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;
+:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 2 -min 2\\\"\" -F \"weka.filters.supervised.attri
+bute.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.attrib
+uteSelection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -P 1.0E
+-12 -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        4107               82.14   %
+Incorrectly Classified Instances       893               17.86   %
+Kappa statistic                          0.6428
+Mean absolute error                      0.1786
+Root mean squared error                  0.4226
+Relative absolute error                 35.72   %
+Root relative squared error             84.5222 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2035  465 |    a = neg
+  428 2072 |    b = pos
+
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Bigram - PNP - EXCL SW'
+
+'Train: SMO1 - Bigram - PNP - EXCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_231.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-N 0 -L -S -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher Studies\
+\\\\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\\\" -t
+okenizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;
+:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 2 -min 2\\\"\" -F \"weka.filters.supervised.attri
+bute.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.attrib
+uteSelection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -P 1.0E
+-12 -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        4067               81.34   %
+Incorrectly Classified Instances       933               18.66   %
+Kappa statistic                          0.6268
+Mean absolute error                      0.1866
+Root mean squared error                  0.432
+Relative absolute error                 37.32   %
+Root relative squared error             86.3944 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2013  487 |    a = neg
+  446 2054 |    b = pos
+
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>echo 'Train: SMO1 - Bigram - PNP - INCL SW'
+
+'Train: SMO1 - Bigram - PNP - INCL SW'
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>java -classpath "C:\Program Files\Java\jdk1.
+7.0_45\lib\tools.jar";"C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar";E:\apache-tomcat-7.0.50\lib
+\servlet-api.jar;E:\servlet-dev;E:\softwares\commons-logging-1.1.3\;E:\softwares\spring_4_jars\;"E:\
+Higher Studies\STUDY\Semester3\NLP\Project\weka.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\
+libsvm.jar";"E:\Higher Studies\STUDY\Semester3\NLP\Project\snowball.jar"; weka.classifiers.meta.Filt
+eredClassifier -t train.arff -d train_SMO1_232.model -c 2 -x 3 -v -o -F "weka.filters.MultiFilter -F
+ \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000000 -prune-rate -1.0
+-N 0 -L -stemmer weka.core.stemmers.SnowballStemmer -M 1 -stopwords \\\"E:\\\\\\\\Higher Studies\\\\
+\\\\STUDY\\\\\\\\Semester3\\\\\\\\NLP\\\\\\\\Project\\\\\\\\MODEL_GEN\\\\\\\\stopwords.txt\\\" -toke
+nizer \\\"weka.core.tokenizers.NGramTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;:\\
+\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\" -max 2 -min 2\\\"\" -F \"weka.filters.supervised.attribut
+e.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.attribute
+Selection.Ranker -T 0.0 -N -1\\\"\"" -W weka.classifiers.functions.SMO -- -C 1.0 -L 0.001 -P 1.0E-12
+ -N 2 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Error, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Error, not in CLASSPATH?
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        4067               81.34   %
+Incorrectly Classified Instances       933               18.66   %
+Kappa statistic                          0.6268
+Mean absolute error                      0.1866
+Root mean squared error                  0.432
+Relative absolute error                 37.32   %
+Root relative squared error             86.3944 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2013  487 |    a = neg
+  446 2054 |    b = pos
+
+
+E:\Higher Studies\STUDY\Semester3\NLP\Project\MODEL_GEN>pause
+Press any key to continue . . .

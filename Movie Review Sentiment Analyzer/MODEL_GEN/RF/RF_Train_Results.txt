@@ -1,0 +1,264 @@
+
+'Train: RF - Unigram - TFIDF - EXCL SW'
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3754               75.08   %
+Incorrectly Classified Instances      1246               24.92   %
+Kappa statistic                          0.5016
+Mean absolute error                      0.3709
+Root mean squared error                  0.4166
+Relative absolute error                 74.18   %
+Root relative squared error             83.3283 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2065  435 |    a = neg
+  811 1689 |    b = pos
+
+
+
+'Train: RF - Unigram - TFIDF - INCL SW'
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3754               75.08   %
+Incorrectly Classified Instances      1246               24.92   %
+Kappa statistic                          0.5016
+Mean absolute error                      0.3709
+Root mean squared error                  0.4166
+Relative absolute error                 74.18   %
+Root relative squared error             83.3283 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2065  435 |    a = neg
+  811 1689 |    b = pos
+
+
+
+'Train: RF - Bigram - TFIDF - EXCL SW'
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3622               72.44   %
+Incorrectly Classified Instances      1378               27.56   %
+Kappa statistic                          0.4488
+Mean absolute error                      0.3833
+Root mean squared error                  0.4289
+Relative absolute error                 76.664  %
+Root relative squared error             85.7736 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1946  554 |    a = neg
+  824 1676 |    b = pos
+
+
+
+'Train: RF - Bigram - TFIDF - INCL SW'
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3622               72.44   %
+Incorrectly Classified Instances      1378               27.56   %
+Kappa statistic                          0.4488
+Mean absolute error                      0.3833
+Root mean squared error                  0.4289
+Relative absolute error                 76.664  %
+Root relative squared error             85.7736 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1946  554 |    a = neg
+  824 1676 |    b = pos
+
+
+
+'Train: RF - Unigram - TF - EXCL SW'
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3712               74.24   %
+Incorrectly Classified Instances      1288               25.76   %
+Kappa statistic                          0.4848
+Mean absolute error                      0.3727
+Root mean squared error                  0.4169
+Relative absolute error                 74.536  %
+Root relative squared error             83.3758 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2092  408 |    a = neg
+  880 1620 |    b = pos
+
+
+
+'Train: RF - Unigram - TF - INCL SW'
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3712               74.24   %
+Incorrectly Classified Instances      1288               25.76   %
+Kappa statistic                          0.4848
+Mean absolute error                      0.3727
+Root mean squared error                  0.4169
+Relative absolute error                 74.536  %
+Root relative squared error             83.3758 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2092  408 |    a = neg
+  880 1620 |    b = pos
+
+
+
+'Train: RF - Bigram - TF - EXCL SW'
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3714               74.28   %
+Incorrectly Classified Instances      1286               25.72   %
+Kappa statistic                          0.4856
+Mean absolute error                      0.3799
+Root mean squared error                  0.4232
+Relative absolute error                 75.972  %
+Root relative squared error             84.6399 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2014  486 |    a = neg
+  800 1700 |    b = pos
+
+
+
+'Train: RF - Bigram - TF - INCL SW'
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3714               74.28   %
+Incorrectly Classified Instances      1286               25.72   %
+Kappa statistic                          0.4856
+Mean absolute error                      0.3799
+Root mean squared error                  0.4232
+Relative absolute error                 75.972  %
+Root relative squared error             84.6399 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2014  486 |    a = neg
+  800 1700 |    b = pos
+
+
+
+'Train: RF - Unigram - PNP - EXCL SW'
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3666               73.32   %
+Incorrectly Classified Instances      1334               26.68   %
+Kappa statistic                          0.4664
+Mean absolute error                      0.3776
+Root mean squared error                  0.4222
+Relative absolute error                 75.512  %
+Root relative squared error             84.4436 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2052  448 |    a = neg
+  886 1614 |    b = pos
+
+
+
+'Train: RF - Unigram - PNP - INCL SW'
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3666               73.32   %
+Incorrectly Classified Instances      1334               26.68   %
+Kappa statistic                          0.4664
+Mean absolute error                      0.3776
+Root mean squared error                  0.4222
+Relative absolute error                 75.512  %
+Root relative squared error             84.4436 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2052  448 |    a = neg
+  886 1614 |    b = pos
+
+
+
+'Train: RF - Bigram - PNP - EXCL SW'
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3757               75.14   %
+Incorrectly Classified Instances      1243               24.86   %
+Kappa statistic                          0.5028
+Mean absolute error                      0.3754
+Root mean squared error                  0.4209
+Relative absolute error                 75.088  %
+Root relative squared error             84.1722 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1981  519 |    a = neg
+  724 1776 |    b = pos
+
+
+
+'Train: RF - Bigram - PNP - INCL SW'
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3757               75.14   %
+Incorrectly Classified Instances      1243               24.86   %
+Kappa statistic                          0.5028
+Mean absolute error                      0.3754
+Root mean squared error                  0.4209
+Relative absolute error                 75.088  %
+Root relative squared error             84.1722 %
+Total Number of Instances             5000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1981  519 |    a = neg
+  724 1776 |    b = pos
+
+
